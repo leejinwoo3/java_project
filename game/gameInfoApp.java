@@ -8,9 +8,9 @@ import utils.Define;
 import game.report.*;
 public class gameInfoApp {
 	Game goodUser = Game.getInstance();
-	Sever CARDAN;
-	Sever LUPEON;
-	Sever AZEROTH;
+	Sever cardan;
+	Sever lupeon;
+	Sever azeroth;
 	GameReport gameReport = new GameReport();
 	
 	public static void main(String[] args) {
@@ -25,33 +25,33 @@ public class gameInfoApp {
 
 	private void createUser() {
 		// TODO Auto-generated method stub
-		CARDAN= new Sever("카단",Define.CARDAN);
-		LUPEON= new Sever("루페온",Define.LUPEON);
-		AZEROTH= new Sever("아제로스",Define.AZEROTH);
-		goodUser.addSever(CARDAN);
-		goodUser.addSever(LUPEON);
-		goodUser.addSever(AZEROTH);
+		cardan= new Sever("카단",Define.CARDAN);
+		lupeon= new Sever("루페온",Define.LUPEON);
+		azeroth= new Sever("아제로스",Define.AZEROTH);
+		goodUser.addSever(cardan);
+		goodUser.addSever(lupeon);
+		goodUser.addSever(azeroth);
 	}
 
 	private void createSever() {
 		// TODO Auto-generated method stub
-		User user1 = new User("펀지",1655,LUPEON);
-		User user2 = new User("원소술녀",1650,LUPEON);
-		User user3 = new User("빈새로이",1640,LUPEON);
-		User user4 = new User("방울토마토라면",1655,CARDAN);
-		User user5 = new User("한국",1654,CARDAN);
-		User user6 = new User("설화희빈",1653,CARDAN);
-		User user7 = new User("성왕용",1652,CARDAN);
-		User user8 = new User("꽃비엘라",1651,CARDAN);
-		User user9 = new User("버서커",1645,LUPEON);
-		User user10 = new User("체리쁘",1635,AZEROTH);
-		User user11 = new User("용오리",1625,AZEROTH);
-		User user12 = new User("데리카나",1615,AZEROTH);
-		User user13 = new User("상큼코끼리",1605,AZEROTH);
-		User user14 = new User("눕수먼",1675,CARDAN);
-		User user15 = new User("백보신장",1695,CARDAN);
-		User user16 = new User("에레니아",1685,AZEROTH);
-		User user17 = new User("레땅땅",1645,LUPEON);
+		User user1 = new User("펀지",1655,lupeon);
+		User user2 = new User("원소술녀",1650,lupeon);
+		User user3 = new User("빈새로이",1640,lupeon);
+		User user4 = new User("방울토마토라면",1655,cardan);
+		User user5 = new User("한국",1654,cardan);
+		User user6 = new User("설화희빈",1653,cardan);
+		User user7 = new User("성왕용",1652,cardan);
+		User user8 = new User("꽃비엘라",1651,cardan);
+		User user9 = new User("버서커",1645,lupeon);
+		User user10 = new User("체리쁘",1635,azeroth);
+		User user11 = new User("용오리",1625,azeroth);
+		User user12 = new User("데리카나",1615,azeroth);
+		User user13 = new User("상큼코끼리",1605,azeroth);
+		User user14 = new User("눕수먼",1675,cardan);
+		User user15 = new User("백보신장",1695,cardan);
+		User user16 = new User("에레니아",1685,azeroth);
+		User user17 = new User("레땅땅",1645,lupeon);
 		
 		goodUser.addUser(user1);
 		goodUser.addUser(user2);
@@ -71,42 +71,42 @@ public class gameInfoApp {
 		goodUser.addUser(user16);
 		goodUser.addUser(user17);
 		
-		LUPEON.regeister(user1);
-		LUPEON.regeister(user2);
-		LUPEON.regeister(user3);
-		LUPEON.regeister(user9);
-		LUPEON.regeister(user17);
-		CARDAN.regeister(user4);
-		CARDAN.regeister(user5);
-		CARDAN.regeister(user6);
-		CARDAN.regeister(user7);
-		CARDAN.regeister(user8);
-		CARDAN.regeister(user15);
-		CARDAN.regeister(user14);
-		AZEROTH.regeister(user10);
-		AZEROTH.regeister(user11);
-		AZEROTH.regeister(user12);
-		AZEROTH.regeister(user13);
-		AZEROTH.regeister(user16);
+		lupeon.regeister(user1);
+		lupeon.regeister(user2);
+		lupeon.regeister(user3);
+		lupeon.regeister(user9);
+		lupeon.regeister(user17);
+		cardan.regeister(user4);
+		cardan.regeister(user5);
+		cardan.regeister(user6);
+		cardan.regeister(user7);
+		cardan.regeister(user8);
+		cardan.regeister(user15);
+		cardan.regeister(user14);
+		azeroth.regeister(user10);
+		azeroth.regeister(user11);
+		azeroth.regeister(user12);
+		azeroth.regeister(user13);
+		azeroth.regeister(user16);
 		
 		
-		addLvForUser(user1, LUPEON,1500);
-		addLvForUser(user2, LUPEON,700);
-		addLvForUser(user3, LUPEON,5);
-		addLvForUser(user4, CARDAN,500);
-		addLvForUser(user5, CARDAN,900);
-		addLvForUser(user6, CARDAN,1000);
-		addLvForUser(user7, CARDAN,670);
-		addLvForUser(user8, CARDAN,4);
-		addLvForUser(user9, LUPEON,870);
-		addLvForUser(user10, AZEROTH,980);
-		addLvForUser(user11, AZEROTH,960);
-		addLvForUser(user12, AZEROTH,910);
-		addLvForUser(user13, AZEROTH,1400);
-		addLvForUser(user14, CARDAN,400);
-		addLvForUser(user15, CARDAN,300);
-		addLvForUser(user16, AZEROTH,0);
-		addLvForUser(user17, LUPEON,700);
+		addLvForUser(user1, lupeon,1500);
+		addLvForUser(user2, lupeon,700);
+		addLvForUser(user3, lupeon,5);
+		addLvForUser(user4, cardan,500);
+		addLvForUser(user5, cardan,900);
+		addLvForUser(user6, cardan,1000);
+		addLvForUser(user7, cardan,670);
+		addLvForUser(user8, cardan,4);
+		addLvForUser(user9, lupeon,870);
+		addLvForUser(user10, azeroth,980);
+		addLvForUser(user11, azeroth,960);
+		addLvForUser(user12, azeroth,910);
+		addLvForUser(user13, azeroth,1400);
+		addLvForUser(user14, cardan,400);
+		addLvForUser(user15, cardan,300);
+		addLvForUser(user16, azeroth,0);
+		addLvForUser(user17, lupeon,700);
 		
 		} 
 	public void addLvForUser(User user, Sever sever,int score) {
