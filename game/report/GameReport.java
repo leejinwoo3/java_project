@@ -52,8 +52,8 @@ public class GameReport {
 
 	private void getSever(User user, int severId) {
 		// TODO Auto-generated method stub
-		ArrayList<Lv> lvList = User.getLvList();
-		int mainId = User.getMainSever().getSeverId();
+		ArrayList<Lv> lvList = user.getLvList();
+		int mainId = user.getMainSever().getSeverId();
 
 		OverLoad[] overLoad = { new BasicSever(), new PopulaSever() };
 

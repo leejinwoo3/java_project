@@ -90,28 +90,28 @@ public class gameInfoApp {
 		AZEROTH.regeister(user16);
 		
 		
-		addLvForUser(user1, LUPEON,100);
-		addLvForUser(user2, LUPEON,99);
-		addLvForUser(user3, LUPEON,97);
-		addLvForUser(user4, CARDAN,99);
-		addLvForUser(user5, CARDAN,98);
-		addLvForUser(user6, CARDAN,100);
-		addLvForUser(user7, CARDAN,91);
-		addLvForUser(user8, CARDAN,80);
-		addLvForUser(user9, LUPEON,87);
-		addLvForUser(user10, AZEROTH,98);
-		addLvForUser(user11, AZEROTH,96);
-		addLvForUser(user12, AZEROTH,91);
-		addLvForUser(user13, AZEROTH,79);
-		addLvForUser(user14, CARDAN,89);
-		addLvForUser(user15, CARDAN,69);
-		addLvForUser(user16, AZEROTH,100);
-		addLvForUser(user17, LUPEON,100);
+		addLvForUser(user1, LUPEON,1500);
+		addLvForUser(user2, LUPEON,700);
+		addLvForUser(user3, LUPEON,5);
+		addLvForUser(user4, CARDAN,500);
+		addLvForUser(user5, CARDAN,900);
+		addLvForUser(user6, CARDAN,1000);
+		addLvForUser(user7, CARDAN,670);
+		addLvForUser(user8, CARDAN,4);
+		addLvForUser(user9, LUPEON,870);
+		addLvForUser(user10, AZEROTH,980);
+		addLvForUser(user11, AZEROTH,960);
+		addLvForUser(user12, AZEROTH,910);
+		addLvForUser(user13, AZEROTH,1400);
+		addLvForUser(user14, CARDAN,400);
+		addLvForUser(user15, CARDAN,300);
+		addLvForUser(user16, AZEROTH,0);
+		addLvForUser(user17, LUPEON,700);
 		
 		} 
 	public void addLvForUser(User user, Sever sever,int score) {
 		Lv lv = new Lv(user.getUserId(),sever,score);
-		User.addSeverLv(lv);
+		user.addSeverLv(lv);
 		
 	}
 

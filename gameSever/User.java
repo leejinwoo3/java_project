@@ -3,10 +3,10 @@ package gameSever;
 import java.util.ArrayList;
 
 public class User {
-	private String userName;
 	private int userId;
-	private static Sever mainSever;
-	private static ArrayList<Lv> lvList = new ArrayList<Lv>();
+	private String userName;
+	private  Sever mainSever;
+	private  ArrayList<Lv> lvList = new ArrayList<Lv>();
 
 	public User(String userName, int userId, Sever mainSever) {
 		this.userName = userName;
@@ -14,7 +14,7 @@ public class User {
 		this.mainSever = mainSever;
 	}
 
-	public static void addSeverLv(Lv lv) {
+	public  void addSeverLv(Lv lv) {
 		lvList.add(lv);
 	}
 
@@ -34,21 +34,20 @@ public class User {
 		this.userId = userId;
 	}
 
-	public static Sever getMainSever() {
+	public  Sever getMainSever() {
 		return mainSever;
 	}
 
-	public static void setMainSever(Sever mainSever) {
-		User.mainSever = mainSever;
+	public  void setMainSever(Sever mainSever) {
+		this.mainSever = mainSever;
 	}
 
-	public static ArrayList<Lv> getLvList() {
+	public  ArrayList<Lv> getLvList() {
 		return lvList;
 	}
 
-	public static void setLvList(ArrayList<Lv> lvList) {
-		User.lvList = lvList;
+	public  void setLvList(ArrayList<Lv> lvList) {
+		this.lvList = lvList;
 	}
 
-	
 }
