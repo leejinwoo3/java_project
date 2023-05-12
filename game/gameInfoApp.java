@@ -29,7 +29,7 @@ public class gameInfoApp {
 	private void createUser() {
 		// TODO Auto-generated method stub
 		User user1 = new User(1655, "펀지", lupeon);
-		User user2 = new User(1655, "방울토마토라면", cardan);
+		User user2 = new User(1655, "방울토마토", cardan);
 		User user3 = new User(1654,"한국",cardan);
 		User user4 = new User(1653,"설화희빈",lupeon);
 		User user5 = new User(1652,"성왕용",cardan);

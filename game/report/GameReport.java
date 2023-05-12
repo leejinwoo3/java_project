@@ -8,9 +8,9 @@ import gameapp.*;
 
 public class GameReport {
 	Game game = Game.getInstance();
-	public static final String TITLE = "유저 \t\t\n";
-	public static final String HEADER = "유저 | 레벨 | 서버 | 서버상태    \n";
-	public static final String LINE = "=====================================\n";
+	public static final String TITLE = "서버인원 \t\t\n";
+	public static final String HEADER = "유저 \t   레벨 \t  서버\t   서버핑    \n";
+	public static final String LINE = "-------------------------------------\n";
 	private StringBuffer buffer = new StringBuffer();
 
 	public String getReport() {
@@ -25,7 +25,6 @@ public class GameReport {
 	}
 
 	private void makeHeader(Sever sever) {
-		buffer.append(GameReport.LINE);
 		buffer.append("\t" + sever.getSeverName());
 		buffer.append(GameReport.TITLE);
 		buffer.append(GameReport.HEADER);
@@ -37,7 +36,7 @@ public class GameReport {
 
 		for (int i = 0; i < userList.size(); i++) {
 			User user = userList.get(i);
-			buffer.append(user.getUserName()); // 서버이름
+			buffer.append(user.getUserName()+"\t"); // 서버이름
 			buffer.append(" | ");
 			buffer.append(user.getUserId()); // 학번
 			buffer.append(" | ");
