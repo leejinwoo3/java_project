@@ -9,12 +9,12 @@ import gameapp.*;
 public class GameReport {
 	Game game = Game.getInstance();
 	public static final String TITLE = "유저 \t\t\n";
-	public static final String HEADER = "유저 | 유저번호 | 서버 | 레벨    \n";
+	public static final String HEADER = "유저 | 레벨 | 서버 | 서버상태    \n";
 	public static final String LINE = "=====================================\n";
 	private StringBuffer buffer = new StringBuffer();
 
 	public String getReport() {
-		ArrayList<Sever> severList = Game.getSeverList(); // 과목 리스트(국어, 수학) 불러오기
+		ArrayList<Sever> severList = game.getSeverList(); // 과목 리스트(국어, 수학) 불러오기
 		for (Sever sever : severList) {
 			makeHeader(sever);
 			makeBody(sever);
@@ -39,7 +39,7 @@ public class GameReport {
 			User user = userList.get(i);
 			buffer.append(user.getUserName()); // 서버이름
 			buffer.append(" | ");
-			buffer.append(user.getUserName()); // 학번
+			buffer.append(user.getUserId()); // 학번
 			buffer.append(" | ");
 			buffer.append(user.getMainSever().getSeverName() + "\t");
 			buffer.append(" | ");
@@ -64,7 +64,7 @@ public class GameReport {
 				if (lv.getSever().getSeverId() == mainId) {
 					ch = overLoad[Define.SAB_TYPE].getCh(lv.getScore());
 				} else {
-					ch = overLoad[Define.DAB_TYPE].getCh(lv.getScore());
+					ch = overLoad[Define.AB_TYPE].getCh(lv.getScore());
 				}
 				buffer.append(lv.getScore());
 				buffer.append(":");

@@ -3,11 +3,11 @@ package gameSever;
 import java.util.ArrayList;
 
 public class Game {
-	private static Game instance = new Game();
+	private static Game instance = null;
 
 	private static String GAME_NAME = "Nice Game";
+	private ArrayList<Sever> severList = new ArrayList<>();
 	private ArrayList<User> userList = new ArrayList<>();
-	private static ArrayList<Sever> severList = new ArrayList<>();
 
 	private Game() {
 	}
@@ -23,15 +23,15 @@ public class Game {
 		userList.add(user);
 	}
 
-	public ArrayList<User> getUserList() {
-		return userList;
-	}
-
 	public void addSever(Sever sever) {
 		severList.add(sever);
 	}
 
-	public static ArrayList<Sever> getSeverList() {
+	public ArrayList<User> getUserList() {
+		return userList;
+	}
+
+	public ArrayList<Sever> getSeverList() {
 		return severList;
 	}
 
